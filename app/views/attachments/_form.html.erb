@@ -1,0 +1,13 @@
+<%= form_for([@issue,@issue.attachments.build])  do |form| %>
+
+    <div class="field">
+      <%= form.label 'New attachment' %>
+
+      <%= form.file_field :content %>
+    </div>
+
+
+    <div class="actions">
+      <%= form.submit 'Save', class: 'btn btn-primary' %>
+    </div>
+<% end %>

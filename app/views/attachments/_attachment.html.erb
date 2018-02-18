@@ -1,0 +1,14 @@
+<li id="attachment-<%= attachment.id %>">
+
+  <p><%= link_to attachment.content_url, attachment.content_url %></p>
+  <span class="timestamp">
+    Posted <%= time_ago_in_words(attachment.created_at) %> ago.
+  </span>
+  <span><%= link_to 'delete', attachment, method: :delete, data: { confirm: 'Do you really want to delete the attachment?' } %>
+</span>
+</li>
+
+
+
+<%-# <%= link_to gravatar_for(attachment.user, size: 50), attachment.user %>
+<%-# span class="user"><%= link_to attachment.user_id.name, attachment.user %> <%-#/span%>

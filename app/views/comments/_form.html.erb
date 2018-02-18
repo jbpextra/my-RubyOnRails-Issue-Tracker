@@ -1,0 +1,12 @@
+<%= form_for([@issue,@issue.comments.build]) do |f| %>
+
+
+<p>
+    <%= f.text_area :body %>
+</p>
+<br>
+
+<p>
+    <%= f.submit %>
+</p>
+<% end %>
